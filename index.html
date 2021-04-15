@@ -9,9 +9,43 @@
 <body>
   <div class="container">
     <div class="quote">
-      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum earum laudantium nobis quia voluptatum pariatur.</h3>
-      <h4>Marcus Aurelius</h4>
+      <!-- <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum earum laudantium nobis quia voluptatum pariatur.</h3>
+      <h4>Marcus Aurelius</h4> -->
     </div>
   </div>
+  <script>
+    const quoteArray = [
+      {
+        quote: "We think of failure and success as opposites, when in reality failure is part of success",
+        author: "Liz and Mollie"
+      },
+      {
+        quote: "There is nothing either good or bad, but thinking makes it so",
+        author: "William Shakespeare"
+      },
+      {
+        quote: "People overestimate what they can do in a day and underestimate what they can do in a year",
+        author: "Erik Spoelstra"
+      },
+      {
+        quote: "The most valuable thing you can make is a mistake. You can't learn anything from being perfect",
+        author: "Adam Osborne"
+      },
+      {
+        quote: "Not everybody's gonna be successful, but if you're scared to fail, you don't deserve to be successful",
+        author: "Charles Barkley"
+      }
+    ];
+
+    const quoteDiv = document.querySelector(".quote");
+    
+    const quoteMarkup = `
+      <h3>${quoteArray[0].quote}</h3>
+      <h4>${quoteArray[0].author}</h4>
+    `;
+  
+    quoteDiv.innerHTML = quoteMarkup;
+    
+  </script>
 </body>
 </html>
