@@ -7,7 +7,7 @@
   width: 100vw;
 }
 
-.quote {
+#quote {
   max-width: 50%;
   background-color: aqua;
 }
