@@ -8,6 +8,11 @@
 </head>
 <body>
   <div class="container">
+    <form id="set-duration">
+      <label for="duration">Quote Duration</label>
+      <input type="number" id="quote-duration" name="duration" value="5">
+      <input type="submit" value="Set Duration">
+    </form>
     <div id="quote">
       <!-- <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti rerum earum laudantium nobis quia voluptatum pariatur.</h3>
       <h4>Marcus Aurelius</h4> -->
@@ -37,8 +42,19 @@
       }
     ];
 
+ 
     const quoteDiv = document.querySelector("#quote");
     
+    const updateDuration = (value) => {
+      quoteDuration = value;
+      console.log("Did I update?", quoteDuration);
+    };
+    const quoteDurationInput = document.querySelector("#set-duration");
+    let quoteDuration = quoteDurationInput.value;
+    console.log("The quote duration value is: ", quoteDuration);
+    quoteDurationInput.addEventListener("submit", updateDuration(quoteDurationInput.value));
+
+
     // Function that takes in a quote object (the argument) and creates HTML markup for each quote.
     const quoteGenerator = (quote) => {
       quoteDiv.innerHTML = `
