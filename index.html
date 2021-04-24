@@ -47,11 +47,18 @@
       `
     };
     
-    quoteArray.forEach((quote, i) => {
-      setTimeout(() => {
-        quoteGenerator(quote);
-      }, i*5000);
-    });    
+    // Function to randomly choose an item from the array
+    const randomQuotePicker = () => {
+      setInterval(() => {
+        quoteGenerator(quoteArray[Math.floor(Math.random()*quoteArray.length)]);
+      }, 5000);
+    };
+
+    // First we randomly choose a quote to render on the page using our quoteGenerator function
+    quoteGenerator(quoteArray[Math.floor(Math.random()*quoteArray.length)]);
+    
+    // Then we run the randomQuotePicker function which uses setInterval to randomly choose and render quotes continuously.
+    randomQuotePicker();
   </script>
 </body>
 </html>
